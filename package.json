@@ -1,0 +1,27 @@
+{
+  "name": "deploy-files",
+  "version": "1.0.0",
+  "description": "Deploy an array of javascript objects into individual files in a directory",
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.12"
+  },
+  "scripts": {
+    "build": "babel ./src/index.js -o ./index.js"
+  },
+  "author": "thurt",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^6.3.26",
+    "babel-cli": "^6.4.5",
+    "babel-plugin-transform-async-to-generator": "^6.4.6"
+  },
+  "babel": {
+    "plugins": [
+      "transform-async-to-generator"
+    ]
+  },
+  "dependencies": {
+    "denodeify": "^1.2.1"
+  }
+}
